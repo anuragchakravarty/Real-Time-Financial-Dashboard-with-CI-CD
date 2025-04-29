@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  dashboard:
+    image: stock-dashboard
+    ports:
+      - "8501:8501"
