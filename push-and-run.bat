@@ -2,8 +2,8 @@
 setlocal enabledelayedexpansion
 
 REM Set your Docker Hub credentials and image name
-set DOCKER_USERNAME=abhishekak71
-set IMAGE_NAME=akshopping-frontend
+set DOCKER_USERNAME=anuragchakravarty
+set IMAGE_NAME=stock-dashboard
 set STACK_NAME=my-app
 
 REM Build the image
