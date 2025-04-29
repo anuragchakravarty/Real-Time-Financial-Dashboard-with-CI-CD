@@ -1,0 +1,27 @@
+version: "3.8"
+
+networks:
+  app-network:
+    driver: overlay
+    attachable: true
+
+services:
+  web:
+    image: anuragchakravarty/stock-dashboard
+    ports:
+      - "3000:8501"
+    networks:
+      - app-network
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      placement:
+        constraints:
+          - node.role == manager
