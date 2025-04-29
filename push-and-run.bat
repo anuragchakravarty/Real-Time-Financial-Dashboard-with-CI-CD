@@ -8,7 +8,7 @@ set STACK_NAME=my-app
 
 REM Build the image
 echo Building Docker image...
-docker build -t %DOCKER_USERNAME%/%IMAGE_NAME% .
+docker build -t %DOCKER_USERNAME%/%IMAGE_NAME% ./client
 
 REM Push the image to Docker Hub
 echo Pushing image to Docker Hub...
