@@ -54,7 +54,7 @@ else:
 
 from alpha_vantage.fundamentaldata import FundamentalData
 with fundamental_data:
-    key = 'OW1639L63B5UCYYL'
+    key = 'E7JKKTO4AVSD0OCP'
     fd = FundamentalData (key, output_format = 'pandas')
     st.subheader('Balance Sheet')
     balance_sheet = fd.get_balance_sheet_annual(ticker)[0]
