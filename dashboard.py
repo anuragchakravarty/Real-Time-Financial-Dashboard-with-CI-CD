@@ -5,7 +5,7 @@ import yfinance as yf
 import plotly.express as px
 
 # --- Title ---
-st.title('📈 Finance Stock Dashboard')
+st.title('📈 FIN Stock Dashboard')
 
 # --- Sidebar Inputs ---
 ticker = st.sidebar.text_input('Enter Stock Ticker (e.g., MSFT)', 'MSFT')
