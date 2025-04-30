@@ -30,9 +30,9 @@ The full project is **containerized using Docker**, orchestrated with **Docker S
 
 ---
 
-🔗 Important Links
+## 🔗 Important Links
 
-Services                     URL
-📊 Streamlit App    http://localhost:3000/
-⚙️ Jenkins	        http://localhost:8100/
-🐳 Docker Hub       https://hub.docker.com/repositories/anuragchakravarty
+- Services                     URL
+- 📊 Streamlit App    http://localhost:3000/
+- ⚙️ Jenkins	        http://localhost:8100/
+- 🐳 Docker Hub       https://hub.docker.com/repositories/anuragchakravarty
