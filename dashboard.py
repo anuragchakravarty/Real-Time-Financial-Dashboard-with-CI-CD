@@ -4,19 +4,17 @@ import numpy as np
 import yfinance as yf
 import plotly.express as px
 
-# --- Title ---
-st.title('📈 fINANCE Stock Dashboard')
+st.title('📈 Stock Dashboard')
 
-# --- Sidebar Inputs ---
 ticker = st.sidebar.text_input('Enter Stock Ticker (e.g., MSFT)', 'MSFT')
 start_date = st.sidebar.date_input('Start Date')
 end_date = st.sidebar.date_input('End Date')
 
-# --- Data Fetching ---
+
 if ticker and start_date and end_date:
     data = yf.download(ticker, start=start_date, end=end_date)
 
-    # ✅ Flatten MultiIndex columns if any (for single ticker consistency)
+    
     if isinstance(data.columns, pd.MultiIndex):
         data.columns = data.columns.get_level_values(0)
 
@@ -44,11 +42,7 @@ if ticker and start_date and end_date:
         stdev = np.std(data2['% Change']) * np.sqrt(252)
         st.write(f"**Standard Deviation (Volatility):** {stdev * 100:.2f}%")
 
-    with fundamental_data:
-        st.info("Fundamental data functionality can be added later with APIs like Alpha Vantage or Finnhub.")
-
-    with news:
-        st.info("News functionality coming soon! You can use APIs like NewsAPI or Finviz.")
+    
 else:
     st.warning("Please enter ticker symbol and valid date range.")
 
