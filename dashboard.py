@@ -4,7 +4,7 @@ import numpy as np
 import yfinance as yf
 import plotly.express as px
 
-st.title('📈 Stock Dashboard 1')
+st.title('📈 Stock Dashboard')
 
 ticker = st.sidebar.text_input('Enter Stock Ticker (e.g., MSFT)', 'MSFT')
 start_date = st.sidebar.date_input('Start Date')
